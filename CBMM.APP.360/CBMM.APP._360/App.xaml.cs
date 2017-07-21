@@ -9,11 +9,17 @@ namespace CBMM.APP._360
 {
     public partial class App : Application
     {
+        public static MasterDetailPage MasterDetailPage;
+        public static int ScreenWidth;
+        public static int ScreenHeight;
+
+        public static App Current { get; set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new CBMM.APP._360.MainPage();
+            MainPage = new CBMM.APP._360.Pages.LoginPage();
         }
 
         protected override void OnStart()
